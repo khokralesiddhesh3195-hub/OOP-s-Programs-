@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+class shape
+{
+public:
+    shape()
+    {
+        cout << "Welcome to the class shape" << endl;
+    }
+};
+
+// First derived class
+class rectangle : public shape
+{
+public:
+    int length;
+    int breadth;
+
+    void show()
+    {
+        cout << "Length = " << length << endl;
+        cout << "Breadth = " << breadth << endl;
+    }
+};
+
+// Second derived class
+class cuboid : public shape
+{
+public:
+    int height;
+
+    void display()
+    {
+        cout << "Height = " << height << endl;
+    }
+};
+
+int main()
+{
+    rectangle r;
+
+    r.length = 10;
+    r.breadth = 20;
+
+    r.show();
+
+    cout << endl;
+
+    cuboid c;
+
+    c.height = 30;
+
+    c.display();
+
+    return 0;
+}
