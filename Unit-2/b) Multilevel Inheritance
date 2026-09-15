@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class shape
+{
+public:
+    shape()
+    {
+        cout << "Welcome to the class shape" << endl;
+    }
+};
+
+class rectangle : public shape
+{
+public:
+    int length;
+    int breadth;
+
+    void show()
+    {
+        cout << "Length = " << length << endl;
+        cout << "Breadth = " << breadth << endl;
+    }
+};
+
+class cuboid : public rectangle
+{
+public:
+    int height;
+
+    void display()
+    {
+        cout << "Height = " << height << endl;
+    }
+};
+
+int main()
+{
+    cuboid c;
+
+    c.length = 10;
+    c.breadth = 20;
+    c.height = 30;
+
+    c.show();
+    c.display();
+
+    return 0;
+}
